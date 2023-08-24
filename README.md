@@ -1,8 +1,8 @@
-# React + Vite
+# LoggBuddy Web - Deployed with Vite (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository includes the developement files for the LoggBuddy website.
+LoggBuddy was first developed with Python with PyQt5 GUI Library, this is not available to the public.
+A new version of LoggBuddy was made for the website, mostly for educational purposes.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Website deployed with Github pages, with the help of vite-deploy by ErickKS.
+https://github.com/ErickKS/vite-deploy
