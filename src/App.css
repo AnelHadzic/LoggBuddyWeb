@@ -1,42 +1,31 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background-image: url(../public/images/BACKGROUND.jpg);
+  background-size: cover;
+  height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 0.5fr auto auto auto 0.5fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". logger form-wrapper lagret .";
+  gap: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-wrapper {
+  grid-area: form-wrapper;
+  width: 470px;
 }
 
-.card {
-  padding: 2em;
+.logger-wrapper {
+  grid-area: logger;
 }
 
-.read-the-docs {
-  color: #888;
+.lagret-wrapper {
+  grid-area: lagret;
 }
