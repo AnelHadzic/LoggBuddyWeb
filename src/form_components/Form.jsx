@@ -202,10 +202,11 @@ function Form() {
           <div className="card-body">
             {status ? (
               <div className="alert alert-danger" role="alert">
-                <i class="bi bi-exclamation-octagon-fill"></i> <p>{status}</p>
+                <i className="bi bi-exclamation-octagon-fill"></i>{" "}
+                <p>{status}</p>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="alert"
                   aria-label="Close"
                 ></button>
