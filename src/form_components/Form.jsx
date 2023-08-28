@@ -202,7 +202,13 @@ function Form() {
           <div className="card-body">
             {status ? (
               <div className="alert alert-danger" role="alert">
-                <p>{status}</p>
+                <i class="bi bi-exclamation-octagon-fill"></i> <p>{status}</p>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
               </div>
             ) : null}
             <form className="logg_form" action="" autocomplete="off">
