@@ -201,12 +201,14 @@ function Form() {
           <div className="card-header">LoggBuddy</div>
           <div className="card-body">
             {status ? (
-              <div className="alert alert-danger" role="alert">
-                <i className="bi bi-exclamation-octagon-fill"></i>{" "}
-                <p>{status}</p>
+              <div
+                class="alert alert-warning alert-dismissible fade show"
+                role="alert"
+              >
+                <strong>Error</strong> {status}.
                 <button
                   type="button"
-                  className="btn-close"
+                  class="btn-close"
                   data-bs-dismiss="alert"
                   aria-label="Close"
                 ></button>
