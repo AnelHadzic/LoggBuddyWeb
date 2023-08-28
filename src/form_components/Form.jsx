@@ -42,8 +42,9 @@ function Form() {
   };
 
   const redirectOrder = () => {
+    const REGEX_WORKORDER = /^1\d{6}$/;
     const number = inputData.current.value;
-    if (number != 0) {
+    if (REGEX_WORKORDER.test(number)) {
       const url =
         "https://sales.allente.no/forhandler/montor/work-order-details/?workorderid=" +
         number;
@@ -54,8 +55,9 @@ function Form() {
   };
 
   const redirectContract = () => {
+    const REGEX_KONTRAKT = /^16\d{8}$/;
     const number = inputData.current.value;
-    if (number.toString().startsWith("16")) {
+    if (REGEX_KONTRAKT.test(number)) {
       const url =
         "https://sales.allente.no/forhandler/cdadmin/ordere-arkiv/orderDetails?agreementNr=" +
         number;
@@ -83,14 +85,27 @@ function Form() {
   function getSelected() {
     const selected = selectedData.current.value;
     const number = inputData.current.value;
+
+    const REGEX_KONTRAKT = /^16\d{8}$/;
+    const REGEX_MOBIL = /^[245689]\d{7}$/;
+    const REGEX_KORTNR = /^(011|017|021|37|0132|8947)/; //SMARTCARD, VCB, HD-BASIC, KORT, A1, OP/SMART, FWA SIM
+    const REGEX_SERIENR = /^(036|0381|064|0611|028|022|086|S210|06817|DCSS)/;
+    const REGEX_KUNDENR = /^3\d{7}$/;
+    const REGEX_WORKORDER = /^1\d{6}$/;
+
     if (selected === "AutoDetect") {
-      if (number.toString().startsWith("16")) {
+      if (REGEX_KONTRAKT.test(number)) {
         return "Avtalenummer ";
-      } else if (
-        number.toString().startsWith("9") ||
-        number.toString().startsWith("4")
-      ) {
+      } else if (REGEX_MOBIL.test(number)) {
         return "Mobilnummer ";
+      } else if (REGEX_KORTNR.test(number)) {
+        return "Kortnr ";
+      } else if (REGEX_SERIENR.test(number)) {
+        return "Serienr ";
+      } else if (REGEX_KUNDENR.test(number)) {
+        return "Kundenr ";
+      } else if (REGEX_WORKORDER.test(number)) {
+        return "WorkOrder ";
       } else {
         return " ";
       }
