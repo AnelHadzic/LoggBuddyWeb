@@ -22,6 +22,7 @@ function Form() {
   // USESTATE HOOKS
   const [saveState, changeSaveState] = useState(false);
   const [savedLogItems, setNewLog] = useState(savedLogs);
+  const [status, setStatus] = useState("");
 
   // USESTATE FUNCTIONS
   function checkTextLengthPreview() {
@@ -50,7 +51,7 @@ function Form() {
         number;
       window.open(url, "_blank");
     } else {
-      alert("Ikke gyldig");
+      setStatus("Ikke gyldig WO nummer");
     }
   };
 
@@ -63,7 +64,7 @@ function Form() {
         number;
       window.open(url, "_blank");
     } else {
-      alert("Ikke gyldig kontraktsnr");
+      setStatus("Ikke gyldig Kontraksnummer");
     }
   };
 
@@ -199,6 +200,11 @@ function Form() {
         <div className="card">
           <div className="card-header">LoggBuddy</div>
           <div className="card-body">
+            {status ? (
+              <div className="alert alert-danger" role="alert">
+                <p>{status}</p>
+              </div>
+            ) : null}
             <form className="logg_form" action="" autocomplete="off">
               <ProsjektComp />
               <InputComp />
