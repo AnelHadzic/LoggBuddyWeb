@@ -205,12 +205,13 @@ function Form() {
                 class="alert alert-warning alert-dismissible fade show"
                 role="alert"
               >
-                <strong>Error</strong> {status}.
+                <strong>Error:</strong> {status}.
                 <button
                   type="button"
                   class="btn-close"
                   data-bs-dismiss="alert"
                   aria-label="Close"
+                  onClick={() => setStatus("")}
                 ></button>
               </div>
             ) : null}
