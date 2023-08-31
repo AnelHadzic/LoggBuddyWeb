@@ -128,14 +128,7 @@ function Form() {
     const number = inputData.current.value;
     const loggText = inputText.current.value;
     const theText = (finishedText.current.value =
-      getDate() +
-      "//MAS//" +
-      project +
-      "//" +
-      getSelected() +
-      number +
-      "\n" +
-      loggText);
+      "MAS//" + project + "//" + getSelected() + number + "\n" + loggText);
 
     checkTextLengthPreview();
 
