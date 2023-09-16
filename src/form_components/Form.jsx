@@ -88,7 +88,7 @@ function Form() {
     const number = inputData.current.value;
 
     const REGEX_KONTRAKT = /^16\d{8}$/;
-    const REGEX_MOBIL = /^[245689]\d{7}$/;
+    const REGEX_MOBIL = /^[49]\d{7}$/;
     const REGEX_KORTNR = /^(011|017|021|37|0132|8947)/; //SMARTCARD, VCB, HD-BASIC, KORT, A1, OP/SMART, FWA SIM
     const REGEX_SERIENR = /^(036|0381|064|0611|028|022|086|S210|06817|DCSS)/;
     const REGEX_KUNDENR = /^3\d{7}$/;
